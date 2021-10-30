@@ -63,5 +63,5 @@ jobs:
           script: |
             docker pull yappy94/web-service-part1:1.0; \
             docker rm -f web-service-part1; \
-            docker run -d -p 8000:8000 --name web-service-part2 yappy94/web-service-part1:1.0
+            docker run -d -p 8000:8000 --name web-service-part1 yappy94/web-service-part1:1.0
   
