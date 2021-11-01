@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "089027b8-1f2d-4c7b-a987-12c9afa24e83",
+		"name": "BE Alta Store Service 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Auth",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\" : \"tesaa@kl.com\",\r\n\t\"firstname\" : \"Alex\",\r\n\t\"lastname\"  : \"Yap\",\r\n\t\"password\"  : \"abc\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\" : \"tesaa@kl.com\",\r\n\t\"password\"  : \"abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\" : \"tesa@kl.com\",\r\n\t\"firstname\" : \"Alex\",\r\n\t\"lastname\"  : \"Yap\",\r\n\t\"password\"  : \"abc\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/register/admin",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\" : \"tesa@kl.com\",\r\n\t\"password\"  : \"abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login/admin",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Admin",
+			"item": [
+				{
+					"name": "Update Admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\" : \"tesa@kl.com\",\r\n\t\"firstname\" : \"Alex\",\r\n\t\"lastname\"  : \"Yapi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admins/45b0f76f-6878-4924-bc6f-ded8f9541a3a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admins",
+								"45b0f76f-6878-4924-bc6f-ded8f9541a3a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admins/45b0f76f-6878-4924-bc6f-ded8f9541a3a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admins",
+								"45b0f76f-6878-4924-bc6f-ded8f9541a3a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Admin Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"newpassword\" : \"abcda\",\r\n\t\"oldpassword\" : \"abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admins/45b0f76f-6878-4924-bc6f-ded8f9541a3a/password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admins",
+								"45b0f76f-6878-4924-bc6f-ded8f9541a3a",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admins/0b0b5482-e8a6-4a6d-93a0-86a32ee0572c",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admins",
+								"0b0b5482-e8a6-4a6d-93a0-86a32ee0572c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API User",
+			"item": [
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NfdXVpZCI6IjA3MDk0MDNhLWIyM2YtNDUwZC04OWZjLTMxYjRjMWMyNGVlOCIsImF1dGhvcml6ZWQiOnRydWUsImV4cCI6MTYzNTU3NzA1MSwidXNlcklkIjoiMGM2OWQxNDUtZGRkNC00OWViLWFjMDAtZDMzZWQ3ZGRmMjg0In0.4HmMPma3CjMX-AC39EQHzd-Bnw7Q2EvmZzjR3IIsReY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"firstname\" : \"Widya\",\r\n\t\"lastname\"  : \"\",\r\n    \"handphone\" : \"085477458414\",\r\n\t\"address\" : \"dsfa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/0c69d145-ddd4-49eb-ac00-d33ed7ddf284",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"0c69d145-ddd4-49eb-ac00-d33ed7ddf284"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NfdXVpZCI6IjA3MDk0MDNhLWIyM2YtNDUwZC04OWZjLTMxYjRjMWMyNGVlOCIsImF1dGhvcml6ZWQiOnRydWUsImV4cCI6MTYzNTU3NzA1MSwidXNlcklkIjoiMGM2OWQxNDUtZGRkNC00OWViLWFjMDAtZDMzZWQ3ZGRmMjg0In0.4HmMPma3CjMX-AC39EQHzd-Bnw7Q2EvmZzjR3IIsReY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/0c69d145-ddd4-49eb-ac00-d33ed7ddf284",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"0c69d145-ddd4-49eb-ac00-d33ed7ddf284"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change User Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NfdXVpZCI6IjA3MDk0MDNhLWIyM2YtNDUwZC04OWZjLTMxYjRjMWMyNGVlOCIsImF1dGhvcml6ZWQiOnRydWUsImV4cCI6MTYzNTU3NzA1MSwidXNlcklkIjoiMGM2OWQxNDUtZGRkNC00OWViLWFjMDAtZDMzZWQ3ZGRmMjg0In0.4HmMPma3CjMX-AC39EQHzd-Bnw7Q2EvmZzjR3IIsReY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"oldpassword\" : \"1234567a\",\r\n\t\"newpassword\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/0c69d145-ddd4-49eb-ac00-d33ed7ddf284/password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"0c69d145-ddd4-49eb-ac00-d33ed7ddf284",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NfdXVpZCI6IjA3MDk0MDNhLWIyM2YtNDUwZC04OWZjLTMxYjRjMWMyNGVlOCIsImF1dGhvcml6ZWQiOnRydWUsImV4cCI6MTYzNTU3NzA1MSwidXNlcklkIjoiMGM2OWQxNDUtZGRkNC00OWViLWFjMDAtZDMzZWQ3ZGRmMjg0In0.4HmMPma3CjMX-AC39EQHzd-Bnw7Q2EvmZzjR3IIsReY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/6aa9bbd6-3b30-4b74-bf05-74634bc3aac3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"6aa9bbd6-3b30-4b74-bf05-74634bc3aac3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": ""
+		}
+	]
+}
